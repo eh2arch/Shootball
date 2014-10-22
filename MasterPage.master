@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">--%>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>ShootBall!</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <%--<style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+    </style>--%>
+    <link href="css/carousel.css" rel="stylesheet"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+     <link rel=Stylesheet type="text/css" href="css/bootstrap.css"/>
+     <link rel=Stylesheet type="text/css" href="css/hover.css"/>
+     <%--<link rel=Stylesheet type="text/css" href="css/jumbotron.css"/>--%>
+   <%--  <link rel=Stylesheet type="text/css" href="css/sticky-footer.css"/>--%>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+     <script src=”js/bootstrap.js”></script>
+     
+    <%-- <link rel=Stylesheet type="text/css" href="css/signin.css"/>--%>
+    
+    <style type="text/css">
+    .back
+    {
+        background-attachment:fixed;
+    }
+      .butt
+    {
+        font-family:'Open Sans Condensed';
+        font-weight:bold;
+        font-size:medium;
+        
+    }   
+    .teal
+    {
+        color:Teal;
+    }
+     
+    span:hover
+    {
+        color:White;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    }
+    </style>
+
+
+</head>
+<body background="Images/soccer-arch.jpg" class="back" >
+    <form id="form1" runat="server">
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:rgba(0,0,0,0.5);">
+   
+    <center><asp:LinkButton ID="LinkButton3" runat="server" class="btn btn-success btn-lg butt hover-shadow" style="text-align:center;background-color:rgba(0,0,0,0);border:none;margin-top:5px;" onclick="LinkButton1_Click"><span class="glyphicon glyphicon-user teal" style="padding-right:20px"></span>AUCTION</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton4" runat="server" class="btn btn-success butt hover-shadow" style="text-align:center;background-color:rgba(0,0,0,0);border:none;margin-top:5px;" onclick="LinkButton2_Click"><span class="glyphicon glyphicon-globe teal" style="padding-right:20px"></span>VIEW</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton1" runat="server" class="btn btn-success butt hover-shadow" style="text-align:center;background-color:rgba(0,0,0,0);border:none;margin-top:5px;" onclick="Result_Click"><span class="glyphicon glyphicon-tower teal" style="padding-right:20px"></span>RESULT</asp:LinkButton>
+                    </center>
+                    </div>
+    <div style="padding-bottom:80px">
+    </div>
+                   <%--</ul>--%>
+        <center><table width="100%">
+           <%-- <tr>
+            
+            
+                <td>
+                    <asp:LinkButton ID="LinkButton1" runat="server" class="btn btn-success btn-lg" align="center" onclick="LinkButton1_Click">AUCTION</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton2" runat="server" class="btn btn-success btn-lg" onclick="LinkButton2_Click">VIEW</asp:LinkButton>
+                </td>
+            </tr>--%>
+            
+            <tr>
+                <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+        </center>
+    </form>
+   <%--  <div id="wrap">
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted">Place sticky footer content here.</p>
+      </div>
+    </div>
+    </div>--%>
+
+
+</body>
+</html>
